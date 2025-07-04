@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Homepage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="hompage.css">
+  <style id="sections-styles">
+/* CSS for section section:header */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    gap: 20px;
+}
+.logo {
+    background-color: #d9d9d9;
+    border-radius: 17px;
+    width: 158px;
+    height: 76px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+.logo img {
+    width: 101px;
+    height: 58px;
+}
+.main-nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+.main-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.main-nav a {
+    font-weight: 700;
+  font-size: 16px;
+  color: var(--light-text);
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+.main-nav li.active a
+ {
+    background-color: var(--primary-color);
+}
+.main-nav li:not(.active) a:hover {
+    background-color: var(--primary-color);
+}
+.cta-button {
+    background-color: var(--primary-color-translucent-darker);
+    border-radius: 18px;
+    padding: 13.5px 18px;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.cta-button:hover {
+    background-color: var(--primary-color);
+}
+
+@media (max-width: 1100px) {
+    .site-header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main-nav {
+        order: 3;
+        width: 100%;
+    }
+    .logo {
+        order: 1;
+    }
+    .cta-button {
+        order: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* CSS for section section:hero */
+.hero-section {
+    padding-top: 85px;
+    padding-bottom: 130px;
+}
+.hero-section .subtitle {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 39px;
+}
+.hero-section h1 {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 1.3;
+    max-width: 946px;
+    margin-bottom: 14px;
+}
+.hero-section .description {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.3;
+    max-width: 843px;
+    margin-bottom: 28px;
+}
+.services-button {
+    display: inline-block;
+    background-color: var(--primary-color-translucent-darker);
+    border-radius: 18px;
+    width: 176px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.services-button:hover {
+    background-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
+    .hero-section h1 {
+        font-size: 36px;
+    }
+    .hero-section .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* CSS for section section:features */
+.services-section {
+    padding-bottom: 52px;
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+.service-card {
+    background-color: var(--primary-color-translucent);
+    border-radius: 22px;
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.service-icon {
+    width: 49px;
+    height: 49px;
+    object-fit: contain;
+    margin-bottom: 45px;
+}
+.service-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.3;
+    margin-bottom: 29px;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.service-description {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.3;
+    flex-grow: 1;
+    margin-bottom: 25px;
+}
+.show-more {
+    font-weight: 500;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+/* CSS for section section:footer */
+.site-footer {
+    background-color: var(--footer-bg);
+}
+.footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  height: 56px;
+ padding-left: 40px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.contact-item img {
+    width: 32px;
+    height: 32px;
+}
+.contact-item span {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+    gap: 15px;
+    }
+}
+  </style>
+  <script src="homepage.js" defer></script>
+</head>
+<body>
+<div class="content-wrapper">
+    <header id="section-header" class="site-header container">
+        <a  class="logo">
+            <img src="homepageimages/logo.png" alt="MB Logo">
+        </a>
+        <nav class="main-nav">
+            <ul>
+                <li class="active"><a>BERANDA</a></li>
+                <li><a href="aboutme.html">ABOUT US</a></li>
+                <li><a href="visimisi.html">VISI MISI</a></li>
+                <li><a href="service.html">SERVICES</a></li>
+                <li><a href="product.html">OUR PRODUCTS</a></li>
+            </ul>
+        </nav>
+        <a href="contact.html" class="cta-button">HUBUNGI SEKARANG</a>
+    </header>
+<main>
+    <section id="hero" class="hero-section container">
+        <p class="subtitle">MOVING YOUR BUSINESS TO NEXT LEVEL.</p>
+        <h1>GET A NEW TECHNOLOGY TO YOUR COMPANY NOW!</h1>
+        <p class="description">PT Mustika Inovasi Bersama adalah perusahaan IT Solution yang didirikan dengan komitmen untuk menyediakan solusi teknologi inovatif di berbagai sektor industri maupun di government tim kami terdiri dari para professional berpengalaman yang memiliki visi & misi yang kuat dan jelas untuk membantu klien bertransformasi dalam era digital yang terus berkembang.</p>
+        <a href="service.html" class="services-button">OUR SERVICES</a>
+    </section>
+</main>
+<section id="services" class="services-section container">
+    <div class="services-grid">
+        <article class="service-card">
+            <img src="homepageimages/org.svg" alt="Konsultasi IT Icon" class="service-icon">
+            <h3 class="service-title">KONSULTASI IT</h3>
+            <p class="service-description">Kami membantu perusahaan dalam merencanakan dan melaksanakan strategi transformasi digital.....</p>
+            <a href="service.html" class="show-more">Show more</a>
+        </article>
+        <article class="service-card">
+            <img src="homepageimages/set.svg" alt="Integrasi Sistem Icon" class="service-icon">
+            <h3 class="service-title">INTEGRASI SISTEM DAN DATA</h3>
+            <p class="service-description">Layanan kami memastikan bahwa berbagai aplikasi dan system dapat beroperasi secara harmonis.....</p>
+            <a href="service.html" class="show-more">Show more</a>
+        </article>
+        <article class="service-card">
+            <img src="homepageimages/gembok.svg" alt="Keamanan Siber Icon" class="service-icon">
+            <h3 class="service-title">KEAMANAN SIBER YANG KUAT</h3>
+            <p class="service-description">Kami menyediakan audit keamanan dan solusi perlindungan.....</p>
+            <a href="service.html" class="show-more">Show more</a>
+        </article>
+        <article class="service-card">
+            <img src="homepageimages/centang.svg" alt="Dukungan Icon" class="service-icon">
+            <h3 class="service-title">DUKUNGAN DAN PEMELIHARAAN BERKELANJUTAN</h3>
+            <p class="service-description">Tim kami siap memberikan dukungan teknis dan pemeliharaan system....</p>
+            <a href="service.html" class="show-more">Show more</a>
+        </article>
+    </div>
+</section>
+</div>
+<footer id="contact" class="site-footer">
+    <div class="footer">
+        <div class="contact-item">
+            <img src="homepageimages/telepon.png" alt="Phone Icon">
+            <span>089677189010</span>
+        </div>
+        <div class="contact-item">
+            <img src="homepageimages/email.png" alt="Email Icon">
+            <span>mib@mustikainovasi.com</span>
+        </div>
+        <div class="contact-item">
+            <img src="homepageimages/lokasi.png" alt="Location Icon">
+            <span>Surabaya, Jawa Timur Indonesia</span>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
